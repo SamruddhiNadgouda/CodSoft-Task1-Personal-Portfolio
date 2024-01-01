@@ -85,7 +85,7 @@ body{
   font-size: 40px;
   margin-bottom: 5px;
 }
-.person-info p{
+.person-info .name{
   font-size: 30px;
   margin: 5px;
 }
@@ -123,15 +123,15 @@ body{
   margin-top: 80px;
 }
 .person-photo{
-  height: 300px;
-  width: 215px;
-  border-radius: 40px;
-  border: 7px solid black;
-  background-image: url(person.jpeg);
-  background-size: cover;
   margin-top: 60px;
 }
-.person-photo:hover{
+.person-photo img{
+  height: 270px;
+  width: 215px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+.person-photo img:hover{
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
   height: 310px;
   width: 220px;
@@ -141,10 +141,12 @@ body{
   text-align: center;
   border: 2px solid black;
   margin: 20px 0px 20px;
+  padding: 0;
 }
 .about p{
   margin: 10px;
   font-size: 25px;
+  text-align: justify;
 }
 .details{
   margin: 25px;
@@ -154,11 +156,8 @@ body{
   font-size: 28px;
 }
 .skills{
-  height: 600px;
+  height: 450px;
   width:100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 50px;
 }
 .skills h1{
@@ -166,29 +165,23 @@ body{
   text-align: center;
   border: 2px solid black;
   margin: 20px 0px 20px;
-}
-.skills img{
-  height: 250px;
-  width: 300px;
-  margin: 20px;
-  padding: 20px;
-}
-.skills img:hover{
-  height: 270px;
-  width: 320px;
+  padding: 0;
 }
 .skill-type{
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
 }
-.skill-type ul{
-  list-style-type:none;
-  justify-content: center;
-  margin: 25px;
-}
 ul li{
-  font-size: 30px;
+  font-size: 23px;
+}
+.type{
+  width: 45%;
+}
+.type img{
+  height: 225px;
+  float: left;
+  margin-right: 30px;
 }
 .project{
   height: 1300px;
@@ -203,6 +196,7 @@ ul li{
   text-align: center;
   border: 2px solid black;
   margin: 20px 0px 20px;
+  padding: 0;
 }
 .project-type{
   display: flex;
@@ -267,6 +261,7 @@ ul li{
   text-align: center;
   border: 2px solid black;
   margin: 20px 0px 20px;
+  padding: 0;
 }
 .contact input{
   height: 28px;
@@ -322,9 +317,9 @@ footer .copyright{
   font-size: 15px;
   font-weight: normal;
 }
-@media screen and (max-width: 900px) {
+@media (max-width: 950px) {
   .tags a{
-    font-size:12px;
+    font-size:15px;
   }
   .input-tag button{
     height: 20px;
@@ -334,30 +329,90 @@ footer .copyright{
     height: 15px;
     width: 120px;
   }
-  .project{
-    height: 100%;
+  .about p{
+    font-size: 20px;
+  }
+  .skills{
+    height: 600px;
+  }
+  .type ul{
+    padding-left: 20px;
+  }
+  .type{
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+  }
+  .type img{
+    margin-bottom: 10px;
+    width: 100%;
+    display: inline;
+    object-fit: contain;
+  }
+  .image p{
+    display: none;
+  }
+  .image img{
+    width: 320px;
+  }
+  .image h1{
+    font-size: 25px;
+  }
+}
+@media (max-width :739px){
+  body{
+    width: 100%;
+  }
+  .tags a{
+    margin: 10px;
+    padding: 0;
   }
   .project-type{
     flex-direction: column;
     align-items: center;
   }
   .image{
-    margin: 5px 0 5px 0;
+    margin: 0;
     padding: 0;
   }
-  .image h1{
-    margin: 0;
+  .project{
+    height: 100%;
   }
-  .image a{
-    margin: 0;
+  .type li{
+    font-size: 18px;
   }
-  .image p{
-    display: none;
+}
+@media (max-width: 560px) {
+  .input-tag button{
+    height: 15px;
+    width: 40px;
+    font-size: 10px;
   }
-  .skill-type li{
-    list-style-type: disc;
+  .input-tag input{
+    height: 7px;
+    width: 70px;
+    font-size: 10px;
   }
-  .skill-type img{
-    display: none;
+  .tags a{
+    font-size: 10px;
+  }
+  .person-info h1{
+    font-size: 27px;
+  }
+  .person-info .name{
+    font-size: 20px;
+  }
+  .person-info .para{
+    font-size: 12px;
+  }
+  .contact input{
+    height: 18px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  .contact textarea{
+    height: 100px;
+    width: 300px;
+    margin-bottom: 20px;
   }
 }
